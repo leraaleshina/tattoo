@@ -1,0 +1,501 @@
+* {
+	box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    /* font-family: 'PT Sans', sans-serif; */
+    font-family: lato,-apple-system,BlinkMacSystemFont,segoe ui,
+    Roboto,helvetica neue,Arial,sans-serif;
+}
+/**/
+header {
+    background: url(img/header.jpg) no-repeat center center / cover;
+    height: 100vh;
+}
+/*Логотип*/
+.nav{
+    width: 300px;;
+}
+.logo{
+    padding: 0;
+    margin: 0;
+    color:#B40404;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 25px;
+    text-shadow: 1px 1px 3px white;
+}
+.logo span {
+    color:white;
+    text-decoration: line-through #B40404;
+    text-shadow: 1px 1px 3px #B40404;
+}
+/*Меню*/
+.menu_button {
+    position: fixed;
+    top: 28px;
+    right: 10px;
+    z-index: 30;
+    width: 50px;
+    height: 50px;
+    /*border-radius: 50%;
+    background-color: #2a2a2a;*/
+}
+.menu_button:hover .menu_lines
+{
+   filter: brightness(0.7);
+}
+.menu_lines,
+.menu_lines::after,
+.menu_lines::before {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #b40404;
+}
+.menu_lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+.menu_lines::before {
+    content: '';
+    top: -12px;
+    transition: 0.3s ease;
+}
+.menu_lines::after {
+    content: '';
+    top: 12px;
+    transition: 0.3s ease;
+}
+.menu_active .menu_lines {
+    background-color: transparent;
+    transition: 0.5s ease;
+}
+.menu_active .menu_lines::before {
+    top: 0;
+    transform: rotate(45deg);
+    transition: 0.5s ease;
+}
+.menu_active .menu_lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: 0.5s ease;
+}
+.menu_nav {
+    top: 0;
+    padding-top: 80px;
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #2a2a2a;
+    overflow-y: auto;
+    right: -100%;
+    transition: 1s ease;
+}
+.menu_active .menu_nav {
+    right: 0;
+    transition: 0.6s ease;
+}
+.menu_link {
+    padding: 30px;
+    font-family: sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+.menu_link:hover {
+    filter: brightness(0.7);
+}
+/*Информация и заголовок h1*/
+.header_inform{
+    margin: auto;
+    margin-top: 200px;
+    width: 530px;
+    color:white;
+    text-align: center;
+}
+.header_h{
+    color:white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 65px;
+    text-shadow: 1px 1px 3px #ab8787 ;
+    padding: 0;
+    margin: 0;
+}
+.header_p{
+    padding: 0;
+    margin: 0;
+    color: #ad7d7d;
+    font-size: 14px;
+}
+/*Телефон и время работы*/
+.header_footer{
+    color:white;
+    font-size: 20px;
+    width: 750px;
+    margin: auto;
+    margin-top: 205px;
+    font-weight: 700;
+}
+.header_footer span {
+    color: #B40404;
+}
+/*О салоне*/
+.about_salon {
+    width: 100%;
+    height: 600px;
+    background: #f2f3f8;
+    padding: 0;
+    margin: 0;
+    
+}
+.about_text {
+    margin-left: 750px;
+    color: #6e6f71;
+}
+.about_text span {
+    border-left: 1px solid #B40404;
+    padding-left: 20px;
+}
+.about_salon h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 43px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B40404;
+    padding-top: 120px;
+}
+.about_salon h3 {
+    color: #606163;
+}
+.our_gal {
+    position: absolute;
+    width: 160px;
+    left: 600px;
+    top:400px;
+    color: #777777;
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotate(270deg);
+}
+.cherta {
+    position: absolute;
+    left: 380px;
+    top: 80px;
+    color: #B40404;
+}
+.about_inform {
+    display: flex;
+}
+.about_foto {
+   position: relative;
+}
+.men_two {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 78px;
+    box-shadow: 0px 0px 8px 8px #d7d7dc
+}
+.women_two {
+    position: absolute;
+    margin-left: 378px;
+    margin-top: 120px;
+    box-shadow: 0px 0px 8px 8px #d7d7dc
+}
+.sailor {
+    margin-left: 400px;
+    width: 130px;
+    height: 130px;
+    transform: rotate(-5deg);
+}
+/*What we do*/
+.what_we_do {
+    background-color: #f2f3f8;;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.container img {
+    width: 80px;
+    height: 70px;
+    margin: auto;
+}
+.container h3 {
+    text-transform: uppercase;
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 28px;
+    text-align: center;
+    color: #211f1f
+}
+.container h3:hover {
+    color: #ccaf2f;
+    cursor: pointer;
+}
+.what_we_do p {
+    font-size: large;
+    color: #6e6f71;
+    text-align: center;
+}
+.container a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: #ccaf2f;
+    font-weight: bold;
+}
+.container a:hover {
+    color: #b40404
+}
+.what_we_do h1 {
+    margin: 0;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 43px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B40404;
+}
+.what_we_do span {
+    border-left: 1px solid #B40404;
+    padding-left: 20px;
+}
+.tattooing, .piercing, .tattooCoverUp, .tattooDesign {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-top: 50px;
+    margin-bottom: 83px;
+}
+.one_tatt, .two_tatt, .three_tatt, .four_tatt {
+    display: flex;
+    flex-direction: column;
+}
+/* Our staff */
+.our_staff {
+    background-color: #f2f3f8;;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.our_staff span {
+    border-left: 1px solid #B40404;
+    padding-left: 20px;
+}
+.our_staff h1 {
+    margin: 0;
+    padding-top: 38px;
+    font-size: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B40404;
+}
+.our_staff p {
+    font-size: large;
+    color: #6e6f71;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.staff_items {
+    margin-bottom: 80px;
+    position: relative;
+    border-bottom: 4px solid #b40404;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 8px #d7d7dc;
+}
+.staff_items img {
+    width: 340px;
+    height: 450px;
+}
+.name_staff {
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    transition: 1s ease;
+}
+.name_staff h3 {
+    color: #b40404;
+    text-align: center;
+    margin: 0;
+    margin-top: 8px;
+    transition: 1s ease;
+    text-transform: capitalize;
+}
+.staff_items:hover .name_staff{
+    margin-top: 5px;
+    overflow: visible;
+    height: 90px;
+}
+.staff_items:hover h3 {
+    color:#ccaf2f;
+    transition: 1s ease;
+}
+/* Gallery */
+.our_works {
+    background-color: #f2f3f8;;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.our_works h1 {
+    margin: 0;
+    margin-bottom: 50px;
+    padding-top: 55px;
+    font-size: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B40404;
+}
+.our_works span {
+    border-left: 1px solid #B40404;
+    padding-left: 20px;
+}
+.slider-carousel{
+    margin: auto;
+    width: 1200px;
+    overflow: hidden;
+}
+.carousel-slide{
+    margin: auto;
+    display: flex;
+    position: relative;
+    left: 0;
+}
+.carousel-slide  img {
+    width: 400px;
+    height: 300px;
+    transition: all ease-out 0.8s;
+}
+.carousel-slide  img:hover {
+    transform: scale(1.1);
+}
+.btn {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.btn img {
+    width: 40px;
+    height: 40px;
+    transition: 0.8s ease;
+}
+.btn img:hover{
+    width: 50px;
+    height: 50px;
+}
+.button {
+    font-weight: bold;
+    width: 50px;
+    padding: 5px 0 ;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase ;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+/* Регистрация */
+.regist {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2f3f8;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.right_side p {
+    font-size: large;
+    color: #6e6f71;
+}
+#error {
+    padding: auto;
+    margin: auto;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    color: #b40404;
+    font-weight: bold;
+}
+form {
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    text-align: center;
+    color: #ccaf2f;
+    font-size: 30px;
+}
+.input::placeholder {
+    color:black;
+    font-weight: bold;
+}
+.input {
+    margin: 12px auto;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #1dab43;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    min-width: 350px;
+    max-width: 350px;
+}
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+}
+.form_btn{
+    background: #1dab43;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+#get_in_touch span {
+    border-left: 1px solid #B40404;
+    padding-left: 20px;
+}
+#get_in_touch{
+    margin: 0;
+    padding: 0;
+    font-size: 43px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B40404;
+    padding-top: 120px;
+}
+/* Footer */
+.footer {
+    margin-top: -4px;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
